@@ -6,7 +6,7 @@ extension Comparable {
     public func constrain<RangeType: InclusiveRange>(
         to range: RangeType
     ) -> Self where RangeType.Bound == Self {
-        switch (range.maybeLowerBound, range.maybeUpperBound) {
+        switch (range.lowerBound, range.upperBound) {
         case (nil, nil): return self
         case let (lowerBound?, nil): return max(self, lowerBound)
         case let (nil, upperBound?): return min(self, upperBound)

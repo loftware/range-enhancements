@@ -14,7 +14,7 @@ final class RangeEnhancementsTests: XCTestCase {
         let _ = (0..<5).lowerBoundDescription
         let _: BoundDescription<Int> = (0..<5).lowerBoundDescription
         let partial: PartialRangeFrom = (0...)
-        let _ = partial.maybeUpperBound
+        let _: Optional<Int> = partial.upperBound
         let _ = partial.lowerBound
         let _ = partial.upperBoundDescription
         let _ = partial.lowerBoundDescription

@@ -1,4 +1,3 @@
-extension PartialRangeThrough: InclusiveRange {
-    public var maybeLowerBound: Bound? { nil }
-    public var maybeUpperBound: Bound? { upperBound }
+extension PartialRangeThrough: InclusiveRange, _InclusiveRangeUpperWorkaround {
+    public var lowerBound: Bound? { nil }
 }

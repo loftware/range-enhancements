@@ -3,12 +3,5 @@
 // `upperBound` conflict, even when one of them is on `ClosedRange` itself, and
 // the other are on protocols `ClosedRange` refines. I'm not sure if that's a
 // bug or not, but it definitely sucks.
-extension ClosedRange: ConcreteRange {
-    public var lowerBoundDescription: BoundDescription<Bound> {
-        return .closed(lowerBound)
-    }
-
-    public var upperBoundDescription: BoundDescription<Bound> {
-        return .closed(upperBound)
-    }
-}
+extension ClosedRange: ConcreteRange, _InclusiveRangeLowerWorkaround,
+    _InclusiveRangeUpperWorkaround {}
