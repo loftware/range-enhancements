@@ -7,8 +7,8 @@ extension Strideable {
         while wrapAmount - stride >= 0 {
             wrapAmount -= stride
         }
-        if wrapAmount == 0{
-            if !range.closedBoundIsLower {
+        if wrapAmount == 0 {
+            if !range.closedBound.isLower {
                 return range.upperBoundDescription.bound
             } else if case .closed(_) = range.otherBound {
                 return range.upperBoundDescription.bound
@@ -25,8 +25,8 @@ extension Strideable {
         while wrapAmount - stride >= 0 {
             wrapAmount -= stride
         }
-        if wrapAmount == 0{
-            if range.closedBoundIsLower {
+        if wrapAmount == 0 {
+            if range.closedBound.isLower {
                 return range.lowerBoundDescription.bound
             } else if case .closed(_) = range.otherBound {
                 return range.lowerBoundDescription.bound

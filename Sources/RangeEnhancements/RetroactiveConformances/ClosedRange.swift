@@ -1,2 +1,2 @@
-extension ClosedRange: ConcreteRange, _InclusiveRangeLowerWorkaround,
+extension ClosedRange: ClosedRangeProtocol, _InclusiveRangeLowerWorkaround,
     _InclusiveRangeUpperWorkaround {}
