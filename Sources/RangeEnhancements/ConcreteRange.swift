@@ -14,9 +14,6 @@ extension ConcreteRange {
     public var upperBoundDescription: BoundDescription<Bound>? {
         return .closed(upperBound)
     }
-
-    public var maybeLowerBound: Bound? { lowerBound }
-    public var maybeUpperBound: Bound? { upperBound }
 }
 
 extension ConcreteRange {
