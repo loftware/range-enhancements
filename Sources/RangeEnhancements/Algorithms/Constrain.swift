@@ -3,7 +3,7 @@ extension Comparable {
     ///
     /// If the value is below the ranges `lowerBound`, or above the range's
     /// `upperBound`, the violated boundary will be returned.
-    public func constrain<RangeType: InclusiveRange>(
+    public func clamped<RangeType: InclusiveRange>(
         to range: RangeType
     ) -> Self where RangeType.Bound == Self {
         switch (range.lowerBound, range.upperBound) {

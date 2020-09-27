@@ -1,4 +1,4 @@
-/// A range which has closed lower and upper bounds.
+/// A range that has closed lower and upper bounds.
 public protocol ClosedRangeProtocol: InclusiveRange, HalfOpenRange {
     /// The lower bound of the range.
     var lowerBound: Bound { get }
